@@ -8,12 +8,12 @@ public class EchoTest {
         // given - when - then
         given()
                 .baseUri("https://postman-echo.com")
-                .body("hello world")
+                .body("some data")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("hello world"))
+                .body("data", equalTo("some data"))
         ;
     }
 }
